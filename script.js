@@ -57,3 +57,14 @@ var todoList = {
 		this.displayTodos();
 	}
 }
+
+
+// Display Todos button
+
+var displayTodosButton = document.getElementById('displayTodosButton');
+
+// Display Todos when Display Todos button is clicked
+
+displayTodosButton.addEventListener('click', function() {
+	todoList.displayTodos();
+})
