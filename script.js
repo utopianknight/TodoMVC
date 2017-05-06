@@ -58,13 +58,14 @@ var todoList = {
 	}
 }
 
-
-// Display Todos button
-
 var displayTodosButton = document.getElementById('displayTodosButton');
 
-// Display Todos when Display Todos button is clicked
+var toggleAllButton = document.getElementById('toggleAllButton');
 
 displayTodosButton.addEventListener('click', function() {
 	todoList.displayTodos();
+})
+
+displayTodosButton.addEventListener('click', function() {
+	todoList.toggleAll();
 })
