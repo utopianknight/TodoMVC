@@ -25,7 +25,7 @@ var todoList = {
 		this.todos[position].todoText = todoText;
 		this.displayTodos();
 	},
-	removeTodo: function(position) {
+	deleteTodo: function(position) {
 		this.todos.splice(position - 1, 1);
 		this.displayTodos();
 	},
@@ -83,11 +83,15 @@ var handlers = {
 		addTodoTextInput.value = '';
 	},
 	changeTodo: function() {
-		debugger;
 		var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
 		var changeTodoTextInput = document.getElementById('changeTodoTextInput');
 		todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
 		changeTodoPositionInput.value = '';
 		changeTodoTextInput.value = '';
+	},
+	deleteTodo: function() {
+		var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
+		todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
+		deleteTodoPositionInput.value = '';
 	}
 };
