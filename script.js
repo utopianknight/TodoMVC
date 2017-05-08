@@ -98,7 +98,7 @@ var view = {
 		todosUl.addEventListener('click', function(event) {
 			var elementClicked = event.target;
 			if (elementClicked.className === 'deleteButton') {
-				handlers.deleteTodo(parseInt(elementClicked.parentNode.id)-1);
+				handlers.deleteTodo(parseInt(elementClicked.parentNode.id)+1);
 			}
 		});
 	}
